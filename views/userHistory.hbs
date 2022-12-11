@@ -1,0 +1,18 @@
+<h2>{{session.user.userName}} ({{session.user.email}}) History</h2>
+<hr>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Login Date/Time</th>
+      <th scope="col">Client Information</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each session.user.loginHistory}}
+        <tr>
+            <td>{{dateTime}}</td>
+            <td>{{userAgent}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
